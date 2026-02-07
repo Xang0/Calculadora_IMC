@@ -51,6 +51,7 @@ class Apresentacao {
         print("\nNome está em branco: favor digitar um valor válido.");
       }
     }
+    stdout.write("|-----------------------------------------------------------------------|\n");
     _dadoCorreto = false;
 
     return nome;
@@ -60,7 +61,7 @@ class Apresentacao {
     double peso = 0.0;
 
     while (!_dadoCorreto) {
-      stdout.write("\nDigite seu peso (use . para separar os inteiros dos decimais):");
+      stdout.write("Digite seu peso (use . para separar os inteiros dos decimais):");
       _entrada = stdin.readLineSync().toString().trim();
 
       if (_entrada != null) {
@@ -80,6 +81,7 @@ class Apresentacao {
         print("\nPeso está em branco: favor digitar um valor válido.");
       }
     }
+    stdout.write("|-----------------------------------------------------------------------|\n");
     _dadoCorreto = false;
 
     return peso;
@@ -109,8 +111,18 @@ class Apresentacao {
         print("\nPeso está em branco: favor digitar um valor válido.");
       }
     }
+    stdout.write("|-----------------------------------------------------------------------|\n");
     _dadoCorreto = false;
 
     return altura;
+  }
+
+  void apresentaResultado(String nome, double peso, double altura, double imc, String descricaoImc) {
+    stdout.write("|-----------------------------------------------------------------------------|\n");
+    stdout.write("|     Nome     |  Peso  |  Altura  |   IMC   |          Classificação         |\n");
+    stdout.write("|  ${nome}  |  ${peso}  |  ${altura}  |  ${imc}  |  ${descricaoImc}  |\n");
+    stdout.write("|-----------------------------------------------------------------------------|\n");
+
+    stdout.write("\nObrigado pela utilização do software! :) \n");
   }
 }
