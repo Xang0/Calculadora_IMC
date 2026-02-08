@@ -6,7 +6,7 @@ import 'package:calculadora_imc/classes/pessoa.dart';
 
 void main(List<String> arguments) {
   // Classe responsável pela apresentacao das informações na tela
-  Apresentacao apresentacao = Apresentacao();
+  Apresentacao apresentacao = Apresentacao(stdin: stdin, stdout: stdout);
 
   apresentacao.informacoesIniciais(); // Apresentacao das informações iniciais
 
